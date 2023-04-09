@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="playAgain"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/gameNameView"
+        android:layout_width="263dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Let's play Tic-Tac-Toe!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#9C119C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playerNameView"
+        android:layout_width="200dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="71dp"
+        android:text="O's Turn"
+        android:textColor="#121111"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameNameView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playAgain"
+        app:srcCompat="@drawable/grid" />
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="19dp"
+        android:shadowColor="#1E1E1E"
+        android:text="Play Again"
+        android:onClick="playAgain"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="@+id/playerNameView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:rippleColor="#121212"
+        app:strokeColor="#151414" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/grid"
+        app:layout_constraintEnd_toEndOf="@id/grid"
+        app:layout_constraintStart_toStartOf="@id/grid"
+        app:layout_constraintTop_toTopOf="@id/grid">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image0"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="30sp"
+                android:onClick="onTap"></ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image1"
+                android:layout_weight="1"
+                android:tag="1"
+                android:padding="30sp"
+                android:onClick="onTap"></ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image2"
+                android:layout_weight="1"
+                android:tag="2"
+                android:padding="30sp"
+                android:onClick="onTap"></ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image3"
+                android:layout_weight="1"
+                android:tag="3"
+                android:padding="30sp"
+                android:onClick="onTap"></ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image4"
+                android:layout_weight="1"
+                android:tag="4"
+                android:padding="30sp"
+                android:onClick="onTap"></ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image5"
+                android:layout_weight="1"
+                android:tag="5"
+                android:padding="30sp"
+                android:onClick="onTap"></ImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image6"
+                android:layout_weight="1"
+                android:tag="6"
+                android:padding="30sp"
+                android:onClick="onTap"></ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image7"
+                android:layout_weight="1"
+                android:tag="7"
+                android:padding="30sp"
+                android:onClick="onTap"></ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/image8"
+                android:layout_weight="1"
+                android:tag="8"
+                android:padding="30sp"
+                android:onClick="onTap"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
